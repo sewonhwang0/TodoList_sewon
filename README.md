@@ -117,7 +117,7 @@ DRF_todoList_26221/
 
 ## ⚙ 실행 방법
 
-```bash
+
 uv venv
 source .venv/bin/activate
 uv pip install -r requirements.txt
