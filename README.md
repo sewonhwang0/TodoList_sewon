@@ -148,6 +148,9 @@ python manage.py runserver
 
 <img width="1512" height="982" alt="Screenshot 2026-03-05 at 2 13 38 PM" src="https://github.com/user-attachments/assets/957f94e9-819e-46b3-9d0f-9a781b57e69c" />
 <img width="1512" height="982" alt="Screenshot 2026-03-05 at 2 18 07 PM" src="https://github.com/user-attachments/assets/d92b6dd0-83e7-4941-a0ed-04af7db4ffc8" />
+![Uploading Screenshot 2026-03-05 at 3.57.52 PM.png…]()
+
+
 
 
 <img width="1512" height="982" alt="Screenshot 2026-03-05 at 2 34 27 PM" src="https://github.com/user-attachments/assets/d6852af8-0c0f-48e4-bfb1-6d809f6bff30" />
