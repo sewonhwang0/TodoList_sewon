@@ -152,6 +152,8 @@ python manage.py runserver
 
 
 
+![Uploading Screenshot 2026-03-05 at 4.00.54 PM.png…]()
+
 
 <img width="1512" height="982" alt="Screenshot 2026-03-05 at 2 34 27 PM" src="https://github.com/user-attachments/assets/d6852af8-0c0f-48e4-bfb1-6d809f6bff30" />
 
