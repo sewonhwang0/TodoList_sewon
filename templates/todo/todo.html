@@ -1,15 +1,41 @@
 {% for todo in todos %}
-  <p>{{ todo.name }}</p>
-  <p>{{ todo.description }}</p>
-  <p>{{ todo.complete }}</p>
-  <p>{{ todo.created_at }}</p>
-  <p>-------------------------------------------------------------------------</p>
+    <p>{{ todo.name }}</p>
 
-  {% if todo.description %}
-    <p>{{ todo.description }}</p>
-  {% else %}
-    No description
-  {% endif %}
+    {% if todo.description %}
+        <p>{{ todo.description }}</p>
+    {% else %}
+        <p>No description</p>
+    {% endif %}
+
     <p>{{ todo.complete }}</p>
     <p>{{ todo.created_at }}</p>
+
+    <!-- ✅ pk가 자동으로 들어감 -->
+    <a href="{% url 'todo:todo_Update' todo.pk %}">수정</a>
+    <button onclick="deleteTodo({{ todo.pk }})">삭제</button>
+    <p>-------------------------------------------</p>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+async function deleteTodo(pk) {
+    if (!confirm("정말 삭제하시겠습니까?")) return;
+
+    try {
+        await axios.delete(`/todo/api/delete/${pk}/`, {
+            headers: {
+                "X-CSRFToken": document.cookie
+                    .split("; ")
+                    .find(row => row.startsWith("csrftoken"))
+                    ?.split("=")[1]
+            }
+        });
+        window.location.reload();  // 삭제 후 새로고침
+    } catch (err) {
+        console.error(err);
+    }
+}
+</script>
+
+
+
 {% endfor %}
